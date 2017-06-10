@@ -52,7 +52,7 @@
              <string notr="true">(out of sync)</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AligINCenter</set>
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -110,7 +110,7 @@
              <string notr="true">0 INC</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AligINCenter</set>
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignCenter</set>
             </property>
             <property name="textInteractionFlags">
              <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -145,7 +145,7 @@
              <string notr="true">0 INC</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AligINCenter</set>
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignCenter</set>
             </property>
             <property name="textInteractionFlags">
              <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -180,7 +180,7 @@
              <string notr="true">0 INC</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AligINCenter</set>
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignCenter</set>
             </property>
             <property name="textInteractionFlags">
              <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -212,7 +212,7 @@
              <string notr="true">0 INC</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AligINCenter</set>
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignCenter</set>
             </property>
             <property name="textInteractionFlags">
              <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -247,7 +247,7 @@
              <string notr="true">0 INC</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AligINCenter</set>
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignCenter</set>
             </property>
             <property name="textInteractionFlags">
              <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -292,7 +292,7 @@
              <string notr="true">0 INC</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AligINCenter</set>
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignCenter</set>
             </property>
             <property name="textInteractionFlags">
              <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -371,7 +371,7 @@
              <string notr="true">(out of sync)</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligINCenter</set>
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignCenter</set>
             </property>
            </widget>
           </item>

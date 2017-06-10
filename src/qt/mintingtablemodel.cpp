@@ -25,13 +25,13 @@
 extern double GetDifficulty(const CBlockIndex* blockindex);
 
 static int column_alignments[] = {
-    Qt::AlignLeft|Qt::AligINCenter,
-    Qt::AlignLeft|Qt::AligINCenter,
-    Qt::AlignLeft|Qt::AligINCenter,
-    Qt::AlignLeft|Qt::AligINCenter,
-    Qt::AlignLeft|Qt::AligINCenter,
-    Qt::AlignLeft|Qt::AligINCenter,
-    Qt::AlignLeft|Qt::AligINCenter
+    Qt::AlignLeft|Qt::AlignCenter,
+    Qt::AlignLeft|Qt::AlignCenter,
+    Qt::AlignLeft|Qt::AlignCenter,
+    Qt::AlignLeft|Qt::AlignCenter,
+    Qt::AlignLeft|Qt::AlignCenter,
+    Qt::AlignLeft|Qt::AlignCenter,
+    Qt::AlignLeft|Qt::AlignCenter
 };
 
 struct TxLessThan

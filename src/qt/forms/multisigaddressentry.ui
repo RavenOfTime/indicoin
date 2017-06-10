@@ -26,7 +26,7 @@
       <string>Public &amp;key:</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligINCenter</set>
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignCenter</set>
      </property>
      <property name="buddy">
       <cstring>pubkey</cstring>
@@ -87,7 +87,7 @@
       <string>&amp;Address:</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligINCenter</set>
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignCenter</set>
      </property>
      <property name="buddy">
       <cstring>address</cstring>
@@ -137,7 +137,7 @@
       <string>Label:</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligINCenter</set>
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignCenter</set>
      </property>
     </widget>
    </item>

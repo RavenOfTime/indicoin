@@ -29,7 +29,7 @@
       <string>A&amp;mount:</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligINCenter</set>
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignCenter</set>
      </property>
      <property name="buddy">
       <cstring>payAmount</cstring>
@@ -42,7 +42,7 @@
       <string>Pay &amp;To:</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligINCenter</set>
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignCenter</set>
      </property>
      <property name="buddy">
       <cstring>payTo</cstring>
@@ -75,7 +75,7 @@
       <string>&amp;Label:</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligINCenter</set>
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignCenter</set>
      </property>
      <property name="buddy">
       <cstring>addAsLabel</cstring>

@@ -654,7 +654,7 @@
                  </size>
                 </property>
                 <property name="alignment">
-                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligINCenter</set>
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>
@@ -734,7 +734,7 @@
                  </size>
                 </property>
                 <property name="alignment">
-                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligINCenter</set>
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>

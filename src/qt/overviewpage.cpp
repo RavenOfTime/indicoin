@@ -55,7 +55,7 @@ public:
         }
 
         painter->setPen(foreground);
-        painter->drawText(addressRect, Qt::AlignLeft|Qt::AligINCenter, address);
+        painter->drawText(addressRect, Qt::AlignLeft|Qt::AlignCenter, address);
 
         if(amount < 0)
         {
@@ -75,10 +75,10 @@ public:
         {
             amountText = QString("[") + amountText + QString("]");
         }
-        painter->drawText(amountRect, Qt::AlignRight|Qt::AligINCenter, amountText);
+        painter->drawText(amountRect, Qt::AlignRight|Qt::AlignCenter, amountText);
 
         painter->setPen(option.palette.color(QPalette::Text));
-        painter->drawText(amountRect, Qt::AlignLeft|Qt::AligINCenter, GUIUtil::dateTimeStr(date));
+        painter->drawText(amountRect, Qt::AlignLeft|Qt::AlignCenter, GUIUtil::dateTimeStr(date));
 
         painter->restore();
     }

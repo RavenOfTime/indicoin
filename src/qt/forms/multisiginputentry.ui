@@ -74,7 +74,7 @@
 <string>Transaction id:</string>
 </property>
 <property name="alignment">
-<set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligINCenter</set>
+<set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignCenter</set>
 </property>
 <property name="buddy">
 <cstring>transactionId</cstring>
@@ -87,7 +87,7 @@
 <string>Transaction output:</string>
 </property>
 <property name="alignment">
-<set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligINCenter</set>
+<set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignCenter</set>
 </property>
 </widget>
 </item>
@@ -97,7 +97,7 @@
 <string>Redeem script:</string>
 </property>
 <property name="alignment">
-<set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligINCenter</set>
+<set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignCenter</set>
 </property>
 <property name="buddy">
 <cstring>redeemScript</cstring>

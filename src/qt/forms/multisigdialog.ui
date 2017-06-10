@@ -146,7 +146,7 @@
             <bool>true</bool>
            </property>
            <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligINCenter</set>
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignCenter</set>
            </property>
            <property name="placeholderText">
             <string>Enter a number</string>

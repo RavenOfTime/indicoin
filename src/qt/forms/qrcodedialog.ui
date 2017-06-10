@@ -88,7 +88,7 @@
            <enum>Qt::PlainText</enum>
           </property>
           <property name="alignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligINCenter</set>
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignCenter</set>
           </property>
           <property name="buddy">
            <cstring>lnLabel</cstring>
@@ -107,7 +107,7 @@
            <enum>Qt::PlainText</enum>
           </property>
           <property name="alignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligINCenter</set>
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignCenter</set>
           </property>
           <property name="buddy">
            <cstring>lnMessage</cstring>
@@ -132,7 +132,7 @@
            <enum>Qt::PlainText</enum>
           </property>
           <property name="alignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AligINCenter</set>
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignCenter</set>
           </property>
           <property name="buddy">
            <cstring>lnReqAmount</cstring>
