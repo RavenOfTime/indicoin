@@ -1,0 +1,11 @@
+[Protocol]
+exec=indicoin-qt '%u'
+protocol=indicoin
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

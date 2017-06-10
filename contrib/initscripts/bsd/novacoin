@@ -1,0 +1,68 @@
+#!/bin/sh
+
+# PROVIDE: indicoin
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+
+#
+# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# indicoin_enable (bool): Set to NO by default. Set this variable to YES if you want to enable indicoin service.
+# indicoin_config (path): Set to /usr/local/etc/indicoin.conf by default.
+# indicoin_user:  The user account indicoin daemon runs as. It uses 'root' user by default.
+# indicoin_group: The group account indicoin daemon runs as. It uses 'wheel' group by default.
+# indicoin_datadir (str): Default to "/var/db/indicoin". Base data directory.
+
+. /etc/rc.subr
+
+name=indicoin
+rcvar=indicoin_enable
+
+: ${indicoin_enable:=NO}
+: ${indicoin_config=/usr/local/etc/indicoin.conf}
+: ${indicoin_datadir=/var/db/indicoin}
+: ${indicoin_user="root"}
+: ${indicoin_group="wheel"}
+
+required_files=${indicoin_config}
+command=/usr/local/bin/indicoind
+indicoin_chdir=${indicoin_datadir}
+pidfile="${indicoin_datadir}/indicoind.pid"
+stop_cmd=indicoin_stop
+command_args="-conf=${indicoin_config} -datadir=${indicoin_datadir} -daemon -pid=${pidfile}"
+start_precmd="${name}_prestart"
+
+indicoin_create_datadir()
+{
+	echo "Creating data directory"
+	eval mkdir -p ${indicoin_datadir}
+	[ $? -eq 0 ] && chown -R ${indicoin_user}:${indicoin_group} ${indicoin_datadir}
+}
+
+indicoin_prestart()
+{
+	if [ ! -d "${indicoin_datadir}/." ]; then
+		indicoin_create_datadir || return 1
+	fi
+}
+
+indicoin_requirepidfile()
+{
+	if [ ! "0`check_pidfile ${pidfile} ${command}`" -gt 1 ]; then
+		echo "${name} not running? (check $pidfile)."
+		exit 1
+	fi
+}
+
+indicoin_stop()
+{
+    indicoin_requirepidfile
+
+	echo "Stopping ${name}."
+	eval ${command} -conf=${indicoin_config} -datadir=${indicoin_datadir} stop
+	wait_for_pids ${rc_pid}
+}
+
+load_rc_config $name
+run_rc_command "$1"

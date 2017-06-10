@@ -1,0 +1,2 @@
+debian/bin/indicoind usr/bin
+src/indicoind usr/lib/indicoin

@@ -1,0 +1,11 @@
+[Unit]
+Description=indicoin daemon serivce
+After=network.target
+
+[Service]
+Type=simple
+User=indicoin
+ExecStart=/opt/indicoin/indicoind
+
+[Install]
+WantedBy=multi-user.target

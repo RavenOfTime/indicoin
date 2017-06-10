@@ -1,0 +1,5 @@
+indicoin-qt usr/bin
+share/pixmaps/indicoin32.xpm usr/share/pixmaps
+share/pixmaps/indicoin80.xpm usr/share/pixmaps
+debian/indicoin-qt.desktop usr/share/applications
+debian/indicoin-qt.protocol usr/share/kde4/services/

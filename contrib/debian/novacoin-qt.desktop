@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=indicoin
+Comment=indicoin P2P Cryptocurrency
+Comment[ru]=indicoin, P2P криптовалюта
+Comment[fr]=indicoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=indicoin, eşten eşe kriptografik sanal para birimi
+Exec=/usr/bin/indicoin-qt
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/indicoin80.xpm
+MimeType=x-scheme-handler/indicoin;
+Categories=Office;
