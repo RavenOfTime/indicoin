@@ -43,7 +43,7 @@ CBigNum bnProofOfWorkLimitTestNet(~uint256(0) >> 16);
 
 unsigned int nStakeMinAge = 30 * nOneDay; // 30 days as zero time weight
 unsigned int nStakeMaxAge = 90 * nOneDay; // 90 days as full weight
-unsigned int nStakeTargetSpacing = 10 * 60; // 10-minute stakes spacing
+unsigned int nStakeTargetSpacing = 5 * 60; // 5-minute stakes spacing
 unsigned int nModifierInterval = 6 * nOneHour; // time to elapse before new modifier is computed
 
 int nCoinbaseMaturity = 500;
@@ -421,7 +421,7 @@ CTransaction::GetLegacySigOpCount() const
     unsigned int nSigOps = 0;
     if (!IsCoinBase())
     {
-        // Coinbase scriptsigs are never executed, so there is 
+        // Coinbase scriptsigs are never executed, so there is
         //    no sense in calculation of sigops.
         BOOST_FOREACH(const CTxIn& txin, vin)
         {
@@ -1117,7 +1117,7 @@ static const int64_t nTargetTimespan = 7 * nOneDay;  // one week
 int64_t inline GetTargetSpacingWorkMax(int nHeight, unsigned int nTime)
 {
     if(nTime > TARGETS_SWITCH_TIME)
-        return 3 * nStakeTargetSpacing; // 30 minutes on mainNet since 20 Jul 2013 00:00:00
+        return 3 * nStakeTargetSpacing; // 30 minutes on mainnet
 
     if(fTestNet)
         return 3 * nStakeTargetSpacing; // 15 minutes on testNet
@@ -2056,7 +2056,7 @@ bool CBlock::SetBestChain(CTxDB& txdb, CBlockIndex* pindexNew)
 // ppcoin: total coin age spent in transaction, in the unit of coin-days.
 // Only those coins meeting minimum age requirement counts. As those
 // transactions not in main chain are not currently indexed so we
-// might not find out about their coin age. Older transactions are 
+// might not find out about their coin age. Older transactions are
 // guaranteed to be in main chain by sync-checkpoint. This rule is
 // introduced to help nodes establish a consistent view of the coin
 // age (trust score) of competing branches.
@@ -2227,7 +2227,7 @@ bool CBlock::CheckBlock(bool fCheckPOW, bool fCheckMerkleRoot, bool fCheckSig) c
 
     if (fProofOfStake)
     {
-        // Proof-of-STake related checkings. Note that we know here that 1st transactions is coinstake. We don't need 
+        // Proof-of-STake related checkings. Note that we know here that 1st transactions is coinstake. We don't need
         //   check the type of 1st transaction because it's performed earlier by IsProofOfStake()
 
         // nNonce must be zero for proof-of-stake blocks
@@ -2267,7 +2267,7 @@ bool CBlock::CheckBlock(bool fCheckPOW, bool fCheckMerkleRoot, bool fCheckSig) c
             return DoS(50, error("CheckBlock() : coinbase timestamp is too late"));
     }
 
-    // Iterate all transactions starting from second for proof-of-stake block 
+    // Iterate all transactions starting from second for proof-of-stake block
     //    or first for proof-of-work block
     for (unsigned int i = fProofOfStake ? 2 : 1; i < vtx.size(); i++)
     {
@@ -3419,7 +3419,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
                     if (inv.hash == pfrom->hashContinue)
                     {
                         // ppcoin: send latest proof-of-work block to allow the
-                        // download node to accept as orphan (proof-of-stake 
+                        // download node to accept as orphan (proof-of-stake
                         // block might be rejected by stake connection check)
                         vector<CInv> vInv;
                         vInv.push_back(CInv(MSG_BLOCK, GetLastBlockIndex(pindexBest, false)->GetBlockHash()));
@@ -3632,8 +3632,8 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
 
     // This asymmetric behavior for inbound and outbound connections was introduced
     // to prevent a fingerprinting attack: an attacker can send specific fake addresses
-    // to users' AddrMan and later request them by sending getaddr messages. 
-    // Making users (which are behind NAT and can only make outgoing connections) ignore 
+    // to users' AddrMan and later request them by sending getaddr messages.
+    // Making users (which are behind NAT and can only make outgoing connections) ignore
     // getaddr message mitigates the attack.
     else if ((strCommand == "getaddr") && (pfrom->fInbound))
     {

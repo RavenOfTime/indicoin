@@ -711,8 +711,8 @@ public:
         @param[in] pvChecks	NULL If pvChecks is not NULL, script checks are pushed onto it instead of being performed inline.
         @return Returns true if all checks succeed
      */
-    bool ConnectInputs(CTxDB& txdb, MapPrevTx inputs, std::map<uint256, CTxIndex>& mapTestPool, const CDiskTxPos& posThisTx, const CBlockIndex* pindexBlock, 
-                     bool fBlock, bool fMiner, bool fScriptChecks=true, 
+    bool ConnectInputs(CTxDB& txdb, MapPrevTx inputs, std::map<uint256, CTxIndex>& mapTestPool, const CDiskTxPos& posThisTx, const CBlockIndex* pindexBlock,
+                     bool fBlock, bool fMiner, bool fScriptChecks=true,
                      unsigned int flags=STRICT_FLAGS, std::vector<CScriptCheck> *pvChecks = NULL);
     bool ClientConnectInputs();
     bool CheckTransaction() const;
@@ -1171,7 +1171,7 @@ public:
     int64_t nMoneySupply;
 
     uint32_t nFlags;  // ppcoin: block index flags
-    enum  
+    enum
     {
         BLOCK_PROOF_OF_STAKE = (1 << 0), // is proof-of-stake block
         BLOCK_STAKE_ENTROPY  = (1 << 1), // entropy bit for stake modifier
