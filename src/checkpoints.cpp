@@ -54,7 +54,8 @@ namespace Checkpoints
 
         MapCheckpoints::const_iterator i = checkpoints.find(nHeight);
         if (i == checkpoints.end()) return true;
-        return hash == i->second.first;
+      //  return hash == i->second.first;
+      return true;
     }
 
     bool CheckBanned(const uint256 &nHash)
@@ -69,7 +70,8 @@ namespace Checkpoints
     {
         MapCheckpoints& checkpoints = (fTestNet ? mapCheckpointsTestnet : mapCheckpoints);
 
-        return checkpoints.rbegin()->first;
+      //  return checkpoints.rbegin()->first;
+      return true;
     }
 
     unsigned int GetLastCheckpointTime()
@@ -88,7 +90,8 @@ namespace Checkpoints
             const uint256& hash = i.second.first;
             std::map<uint256, CBlockIndex*>::const_iterator t = mapBlockIndex.find(hash);
             if (t != mapBlockIndex.end())
-                return t->second;
+        //        return t->second;
+          return NULL;
         }
         return NULL;
     }
@@ -221,7 +224,7 @@ namespace Checkpoints
         return false;
     }
 
-    // Automatically select a suitable sync-checkpoint 
+    // Automatically select a suitable sync-checkpoint
     uint256 AutoSelectSyncCheckpoint()
     {
         const CBlockIndex *pindex = pindexBest;
@@ -266,7 +269,7 @@ namespace Checkpoints
             return false;
         if (hashBlock == hashPendingCheckpoint)
             return true;
-        if (mapOrphanBlocks.count(hashPendingCheckpoint) 
+        if (mapOrphanBlocks.count(hashPendingCheckpoint)
             && hashBlock == WantedByOrphan(mapOrphanBlocks[hashPendingCheckpoint]))
             return true;
         return false;

@@ -104,9 +104,9 @@ public:
     enum
     {
         PUBKEY_PAIR_ADDRESS = 1,
-        PUBKEY_ADDRESS = 8,
+        PUBKEY_ADDRESS = 25,
         SCRIPT_ADDRESS = 20,
-        PUBKEY_PAIR_ADDRESS_TEST = 6,
+        PUBKEY_PAIR_ADDRESS_TEST = 8,
         PUBKEY_ADDRESS_TEST = 111,
         SCRIPT_ADDRESS_TEST = 196
     };

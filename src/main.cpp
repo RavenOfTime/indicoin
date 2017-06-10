@@ -2786,7 +2786,7 @@ bool LoadBlockIndex(bool fAllowNew)
         //    CTxOut(empty)
         //  vMerkleTree: 4cb33b3b6a
 
-        const string strTimestamp = "https://bitcointalk.org/index.php?topic=134179.msg1502196#msg1502196";
+        const string strTimestamp = "https://www.facebook.com/soorajrsingh if you break this send request";
         CTransaction txNew;
         txNew.nTime = 1360105017;
         txNew.vin.resize(1);
@@ -2800,10 +2800,10 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nVersion = 1;
         block.nTime    = 1360105017;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = !fTestNet ? 1575379 : 46534;
+        block.nNonce   = !fTestNet ? 40411332 : 40411332;
 
         //// debug print
-        assert(block.hashMerkleRoot == uint256("0x4cb33b3b6a861dcbc685d3e614a9cafb945738d6833f182855679f2fad02057b"));
+        assert(block.hashMerkleRoot == uint256("6f550758e82153fdda354008395f96a328e48ccdb269d8732084f78d83dd9654"));
         block.print();
         assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
         assert(block.CheckBlock());
