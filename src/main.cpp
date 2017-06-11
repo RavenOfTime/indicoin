@@ -2801,7 +2801,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nTime    = 1360105017;
         block.nBits    = 0x1e0ffff0;
         block.nNonce   = !fTestNet ? 40411332 : 40411332;
-
+block.print();
         //// debug print
         assert(block.hashMerkleRoot == uint256("6f550758e82153fdda354008395f96a328e48ccdb269d8732084f78d83dd9654"));
         block.print();
