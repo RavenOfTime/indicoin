@@ -2803,7 +2803,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nNonce   = !fTestNet ? 40411332 : 40411332;
         uint256 hashTarget = CBigNum().SetCompact(block.nBits).getuint256();
                    uint256 thash;
-                   char scratchpad[SCRYPT_SCRATCHPAD_SIZE];
+                  
 
                    loop
                    {
