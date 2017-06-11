@@ -2799,46 +2799,11 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
         block.nTime    = 1360105017;
-        block.nBits    = bnProofOfWorkLimit.GetCompact();
+        block.nBits    = 0x1e0ffff0;
         block.nNonce   = !fTestNet ? 40411332 : 40411332;
-        uint256 hashTarget = CBigNum().SetCompact(block.nBits).getuint256();
-                   uint256 thash;
-                  
 
-                   loop
-                   {
-       #if defined(USE_SSE2)
-                       // Detection would work, but in cases where we KNOW it always has SSE2,
-                       // it is faster to use directly than to use a function pointer or conditional.
-       #if defined(_M_X64) || defined(__x86_64__) || defined(_M_AMD64) || (defined(MAC_OSX) && defined(__i386__))
-                       // Always SSE2: x86_64 or Intel MacOS X
-                       scrypt_1024_1_1_256_sp_sse2(BEGIN(block.nVersion), BEGIN(thash), scratchpad);
-       #else
-                       // Detect SSE2: 32bit x86 Linux or Windows
-                       scrypt_1024_1_1_256_sp(BEGIN(block.nVersion), BEGIN(thash), scratchpad);
-       #endif
-       #else
-                       // Generic scrypt
-                       scrypt_1024_1_1_256_sp_generic(BEGIN(block.nVersion), BEGIN(thash), scratchpad);
-       #endif
-                       if (thash <= hashTarget)
-                           break;
-                       if ((block.nNonce & 0xFFF) == 0)
-                       {
-                           printf("nonce %08X: hash = %s (target = %s)\n", block.nNonce, thash.ToString().c_str(), hashTarget.ToString().c_str());
-                       }
-                       ++block.nNonce;
-                       if (block.nNonce == 0)
-                       {
-                           printf("NONCE WRAPPED, incrementing time\n");
-                           ++block.nTime;
-                       }
-                   }
-                   printf("block.nTime = %u \n", block.nTime);
-                   printf("block.nNonce = %u \n", block.nNonce);
-                   printf("block.GetHash = %s\n", block.GetHash().ToString().c_str());
         //// debug print
-        assert(block.hashMerkleRoot == uint256("a19203400a0609f1105e22889b381e2eb227362cd4674a20bc2fa3ef04cca855"));
+        assert(block.hashMerkleRoot == uint256("6f550758e82153fdda354008395f96a328e48ccdb269d8732084f78d83dd9654"));
         block.print();
         assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
         assert(block.CheckBlock());
